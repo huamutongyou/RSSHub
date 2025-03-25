@@ -90,7 +90,7 @@ async function handler(ctx) {
     const { id = '751' } = ctx.req.param();
     const limit = ctx.req.query('limit') ? Number.parseInt(ctx.req.query('limit'), 10) : 30;
 
-    const rootUrl = 'https://www.8264.com';
+    const rootUrl = 'https://bbs.8264.com';
     const currentUrl = new URL(`list/${id}`, rootUrl).href;
 
     const { data: response } = await got(currentUrl, {
